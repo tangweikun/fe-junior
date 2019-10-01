@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页换肤</title>
+<link href="black.css" rel="stylesheet" type="text/css" />
+<link href="index.css" rel="stylesheet" type="text/css" />
+<script>
+	window.onload = function() {
+		var oLink = document.getElementsByTagName("link")[0];
+		var oSkin = document.getElementById("skin").getElementsByTagName("li");
+		
+		for(var i = 0; i< oSkin.length; i++) {		
+			oSkin[i].onclick = function() {
+				for(var p in oSkin) oSkin[p].className = "";
+				this.className = "current";
+				oLink['href'] = this.id + ".css";				
+			}	
+		}	
+	};
+</script>
+</head>
+<body>
+<div id="outer">
+	<ul id="skin">
+		<li id="black" class="current" title="黑色"></li>
+		<li id="red" title="红色"></li>
+		<li id="green" title="绿色"></li>
+	</ul>
+	<ul id="nav">
+		<li>新闻</li>
+		<li>娱乐</li>
+		<li>体育</li>
+		<li>电影</li>
+		<li>音乐</li>
+		<li class="last">旅游</li>
+	</ul>
+</div>
+</body>
+</html>
