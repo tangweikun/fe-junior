@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>百度输入法</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+        
+        #outer {
+            width: 70px;
+            margin: 10px auto;
+        }
+        
+        #menu {
+            margin-top: 5px;
+            background: #fff;
+            border: 1px solid #9a99ff;
+            display: none;
+            color: #00c;
+            padding: 0 5px;
+        }
+        
+        #close {
+            border-top: 1px solid #9a99ff;
+        }
+        
+        #menu div:hover {
+            background: #d9e1f6;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var btnElement = document.getElementsByTagName("button")[0];
+            var menuElement = document.getElementById("menu");
+            var closeElement = document.getElementById("close");
+
+            btnElement.onclick = function() {
+                menuElement.style.display = menuElement.style.display === "block" ? "none" : "block"
+            };
+
+            closeElement.onclick = function() {
+                style.display = "none"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <button>切换输入法</button>
+        <div id='menu'>
+            <div>手写</div>
+            <div>拼音</div>
+            <div id='close'>关闭</div>
+        </div>
+    </div>
+</body>
+
+</html>
