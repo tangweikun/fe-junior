@@ -58,9 +58,6 @@
                 tabs[i].onmousemove = function() {
                     for (let n = 0; n < tabs.length; n++) {
                         tabs[n].className = n === i ? 'current' : '';
-                    }
-
-                    for (let n = 0; n < ulEle.length; n++) {
                         ulEle[n].style.display = n === i ? 'block' : 'none';
                     }
                 };
